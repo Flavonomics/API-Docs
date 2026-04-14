@@ -1,4 +1,4 @@
-# Flavonomics API v1 Reference.
+# Flavonomics API v1 Reference
 
 Production API documentation for the external, key-protected ingredient and flavour API.
 
