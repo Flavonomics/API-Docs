@@ -34,11 +34,13 @@ Both key types are available on the Enterprise plan only. If you are on the Flav
 ### HTTP API keys
 
 - Create and revoke them from `https://www.flavonomics.com/developer` with an Enterprise account
+- Enterprise users can also manage them from `https://www.flavonomics.com/account`
 - Send them in the `x-api-key` header
 
 ### MCP keys
 
-- Create and revoke them from `https://www.flavonomics.com/account` with an Enterprise account
+- Create and revoke them from `https://www.flavonomics.com/developer` with an Enterprise account
+- Enterprise users can also manage them from `https://www.flavonomics.com/account`
 - Send them as `Authorization: Bearer YOUR_MCP_KEY` on the SSE connection
 - The server also accepts `?api_key=YOUR_MCP_KEY` on `/sse` as a legacy fallback for clients that cannot send headers
 
@@ -423,8 +425,8 @@ Inputs:
 ## Integration Quick Start
 
 1. Upgrade to the Enterprise plan if you need programmatic access. Flavour Society members who upgrade receive a pro-rated refund for the current month.
-2. Create an HTTP API key on `/developer` if you want endpoint-level integration.
-3. Create an MCP key on `/account` if you want a remote tool server for agents.
+2. Create your programmatic keys on `/developer`. That is the primary setup page for both HTTP API and remote MCP access.
+3. If you are already in account settings, Enterprise users can also manage both key types on `/account`.
 4. Start with `GET /api/v1/ingredients/search` or `resolve_ingredients`.
 5. Move to pairings with `GET /api/v1/ingredients/{ingredient}/pairings` or `get_recommended_pairings`.
 6. Add deeper explainability with `include_facets=true` in HTTP or `get_explanation_evidence` in MCP.
